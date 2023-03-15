@@ -190,6 +190,23 @@ h2 {
     background-color: transparent;
 }
 
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 280px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.mobile-nav .top-menu {
+    display: flex;
+    flex-direction: column;
+
+}
+
 @media (max-width:1200px) {
     .banner-title {
       width:75%
@@ -209,8 +226,13 @@ h2 {
     }
 
     .top nav {
-        display: none;
+      display:none;
+    }
 
+    .mobile-nav {
+        display: block;
+        transform: translateX(-102%);
+        transition: transform 0.4s;
     }
 }
 
@@ -277,4 +299,8 @@ h2 {
         padding: 50px;
     }
 
+}
+
+.showMenu {
+    transform: translateX(0);
 }
